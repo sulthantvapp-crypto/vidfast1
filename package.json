@@ -5,12 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:proxy": "node proxy-server.js",
-    "start:advanced-proxy": "node advanced-proxy-server.js",
-    "start:nginx-proxy": "node nginx-style-proxy.js",
-    "start:both": "concurrently \"npm:start\" \"npm:start:proxy\"",
-    "start:all": "concurrently \"npm:start\" \"npm:start:proxy\" \"npm:start:advanced-proxy\" \"npm:start:nginx-proxy\"",
-    "install-browsers": "npx playwright install firefox"
+    "postinstall": "npx playwright install firefox"
   },
   "dependencies": {
     "axios": "^1.6.0",
